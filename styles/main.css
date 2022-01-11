@@ -132,11 +132,20 @@
 
 .button:hover .button_arrow_img {
     transform: translateX(8px);
+    -o-transform: translateX(8px);
+    -moz-transform: translateX(8px);
+    -webkit-transform: translateX(8px);
     transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .button_arrow_img {
     transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .button_text {
@@ -156,25 +165,40 @@
 }
 
 .like_box {
-
     display: flex;
     align-items: center;
+
+}
+
+.like_btn {
+    width: 22px;
+    height: 20px;
+    background-image: url("../img/like.png");
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 21px;
+    transition: 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .like_box:hover {
     cursor: pointer;
 }
 
-.like_box:hover .like_img {
+.like_box:hover .like_btn {
     transform: scale(1.2);
-    transition: 0.5s;
+    -o-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
-.like_img {
-    transition: 0.5s;
-    margin-left: 5px;
-    margin-right: 21px;
-}
+
 
 .like_text {
     font-weight: 600;
@@ -216,7 +240,7 @@
     }
 
     .figure_box_3 {
-        background-image: url("../img/clock.png");
+        background-image: url("../img/bell.png");
         background-size: 26px 26px;
     }
 
@@ -271,7 +295,7 @@
     }
 
     .figure_box_3 {
-        background-image: url("../img/clock.png");
+        background-image: url("../img/bell2.png");
         background-size: 18px 18px;
     }
 
@@ -305,6 +329,12 @@
         width: 415px;
     }
 
+    .like_btn {
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/like_small.png");
+    }
+
     .footer {
         margin-top: 36px;
         padding-bottom: 45px;
@@ -316,25 +346,27 @@
 @media (max-width: 767px) {
 
     .container {
-        margin: 0 auto;
-        max-width: 320px;
+       display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 767px;
         background-image: url("../img/bg_circle_4.png"), url("../img/bg_bubble_4.png");
     }
 
     .main_logo {
         background-image: url("../img/main_logo_4.png");
-        background-size: contain;
-        max-width: 320px;
+        background-size:contain;
+        min-width: 320px;
         height: 179px;
     }
 
     header {
-        flex-direction: column;
-        flex-flow: wrap-reverse;
+        flex-direction: column-reverse;
     }
 
     .main {
         margin: 40px 0 0 0;
+        flex-direction: column;
     }
 
     .left_text_box {
@@ -380,6 +412,11 @@
 
     .button_arrow_img {
         display: none;
+    }
+
+    .like_btn {
+        width: 18px;
+        background-image: url("../img/like_active.png");
     }
 
     .footer {
